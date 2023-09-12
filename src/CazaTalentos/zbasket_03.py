@@ -1,4 +1,4 @@
-import  numpy as np
+import numpy as np
 
 np.random.seed(102191)
 
@@ -9,23 +9,22 @@ def ftirar(prob, qty):
   return sum(np.random.rand(qty) < prob)
 
 
-
 # defino las jugadoras
+tiros = 10
+cant_jugadoras = 100
 mejor = 0.7
-peloton = np.array(range(501, 600)) / 1000
+segunda = 500
+peloton = np.array(range(segunda, (segunda+cant_jugadoras))/1000)
 jugadoras = np.append(mejor, peloton)
 
 # veo que tiene el vector
 jugadoras
 
-# vectorizo la funcion  ftirar
-vec_ftirar = np.vectorize(ftirar)
-
-for i in range(10):
-  vaciertos = vec_ftirar(jugadoras, 10) # 10 tiros libres cada jugadora
+for i in range(tiros):
+  vaciertos = []
+  for jugadora in jugadoras:
+    vaciertos.append(ftirar(jugadora, tiros))
   mejor_ronda = np.argmax(vaciertos)
   aciertos_torneo = vaciertos[mejor_ronda]
-  aciertos_segunda = vec_ftirar(jugadoras[mejor_ronda], 10)
+  aciertos_segunda = ftirar(jugadoras[mejor_ronda], tiros)
   print(aciertos_torneo, "\t", aciertos_segunda)
-
-

@@ -11,7 +11,7 @@ require("parallel")
 
 PARAM <- list()
 # reemplazar por las propias semillas
-PARAM$semillas <- c(102191, 200177, 410551, 552581, 892237)
+PARAM$semillas <- c(555521, 555523, 555557, 555589, 555593)
 
 #------------------------------------------------------------------------------
 # particionar agrega una columna llamada fold a un dataset
@@ -89,7 +89,7 @@ ArbolesMontecarlo <- function(semillas, param_basicos) {
 #------------------------------------------------------------------------------
 
 # Aqui se debe poner la carpeta de la computadora local
-setwd("~/buckets/b1/") # Establezco el Working Directory
+# setwd("~/buckets/b1/") # Establezco el Working Directory
 # cargo los datos
 
 # cargo los datos
