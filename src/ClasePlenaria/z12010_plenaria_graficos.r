@@ -46,11 +46,12 @@ PARAM$trainingstrategy$clases_minoritarias <- c("BAJA+1","BAJA+2")
 PARAM$trainingstrategy$undersampling <- 0.1
 PARAM$trainingstrategy$semilla <- 200177  # segunda semilla
 
-PARAM$trainingstrategy$finaltrain <- c( 201901, 201902, 201903, 201904, 201905,
-  202906, 201907, 201908, 201909, 201910, 201911, 201912, 202001,
-  202002, 202010, 202011, 202012, 202101, 202102, 202103, 202104)
+PARAM$trainingstrategy$finaltrain <- c(201901, 201902, 201903, 201904, 201905, 202906, 
+                                       201907, 201908, 201909, 201910, 201911, 201912, 
+                                       202001, 202002,         202010, 202011, 202012, 
+                                       202101, 202102, 202103, 202104, 202105, 202106, 202107)
 
-PARAM$trainingstrategy$future <- c(202107)
+PARAM$trainingstrategy$future <- c(202109)
 
 
 # Hiperparametros FIJOS de  lightgbm
